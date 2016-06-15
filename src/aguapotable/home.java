@@ -768,7 +768,6 @@ public class home extends javax.swing.JFrame {
             lblconscobrar.setEnabled(true);
             btncancelarfactura.setEnabled(true);        
             btncalcular.setEnabled(true);
-            btnsave.setEnabled(true);
             txtnumcedula.setEnabled(false);
             btnnuevocobro.setEnabled(false);
             txtnumcedula.setText("Ingrese el número de cédula del cliente");
@@ -848,6 +847,7 @@ public class home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Lo sentimos, NO puede ingresar valores menores o iguales a 0 (CERO)", "Error", JOptionPane.ERROR_MESSAGE);
                 txtcantconsumida.grabFocus();
             } else {
+                btnsave.setEnabled(true);
                 btncobrar.setEnabled(true); 
                 lblconscobrar.setText(txtcantconsumida.getText());
                 total = (float) (Float.parseFloat(txtcantconsumida.getText())*(0.15));
